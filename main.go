@@ -35,11 +35,11 @@ func main() {
 
 	for i, v := range pixels {
 		for index, a := range v {
-			if index%2 == 0 && i%2 == 0 {
-				fmt.Print(grayscale[a.R/4], " ")
+			if index%10 == 0 && i%10 == 0 {
+				fmt.Print(grayscale[((a.R+a.G+a.B+a.A)/4)/4], " ")
 			}
 		}
-		if i%2 == 0 {
+		if i%10 == 0 {
 			fmt.Print("\n")
 		}
 	}
